@@ -1,0 +1,43 @@
+.plans_banner{
+    .hb_left{
+        padding-left: 11.2vw;
+        align-items: center;
+    }
+}
+.plan_page_Section{
+   @media (min-width:1440px) {
+            max-width: 1440px;
+            margin: auto;
+     }
+     @media (min-width:1025px) and (max-width:1283px) {
+        padding: 5vw;
+     }
+    .elementor-widget:not(:last-child) {
+        margin-bottom: 0 !important;
+    }
+    .psicons{
+        .plan_icons{
+            img{
+                width: 36px;
+            } 
+        }
+      h2{
+         br{
+            @media (min-width:768px) and (max-width:1385px) {
+             display: none;
+            }
+         }
+      }
+        .view_plan{
+            img {
+                width: 30px;
+            }
+            a{
+                img{
+                    width: 12px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

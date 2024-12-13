@@ -1,0 +1,25 @@
+/*
+Theme Name: Betheme
+Theme URI: https://themes.muffingroup.com/betheme/
+Author: Muffin group
+Author URI: https://muffingroup.com/
+Description: The biggest WordPress Theme ever
+License: Themeforest Split Licence
+License URI: https://themeforest.net/licenses/standard
+Text Domain: betheme
+Version: 21.9.8
+
+All css files are placed in /css/ folder
+*/
+.ClearCart{
+	 float: right;
+    color: red;
+    width: 100%;
+	cursor:pointer;
+}
+.RemoveItem{
+	float: right;
+    top: 0;
+    padding-right: 10px;
+    font-weight: 700;
+}

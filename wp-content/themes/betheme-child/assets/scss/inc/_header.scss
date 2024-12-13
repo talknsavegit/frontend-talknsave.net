@@ -1,0 +1,587 @@
+header {
+    #Top_bar {
+        z-index: 99999 !important;  
+        .top_bar_left {
+            display: flex;
+            display: -webkit-flex;
+
+            @media screen and (max-width:767px) {
+                flex-direction: column;
+            }
+
+            .logo {
+                flex: 1 1 20%;
+
+                #logo {
+                    @media screen and (max-width:767px) {
+                        width: 100%;
+                        text-align: left;
+                        margin-left: 76px;
+                        margin-top: 0;
+                    }
+
+                    img {
+                        &.logo-mobile {
+                            max-height: 55px !important;
+                        }
+                    }
+
+                }
+
+                .mobile-custom-cart {
+                    &::before {
+                        @media screen and (max-width:767px) {
+                            content: "";
+                            display: block;
+                            background-image: url(../img/bag.svg);
+                            width: 40px;
+                            background-size: contain;
+                            height: 40px;
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            top: 15px;
+                            right: 20px;
+                        }
+                    }
+                }
+            }
+
+            .menu_wrapper {
+                flex: 1 1 70%;
+                max-width: fit-content;
+                @media (min-width:1240px) and (max-width:1365px){
+                    flex: 1 1 100%;
+                }
+                &.active {
+                    .secondary_menu_wrapper {
+                        @media screen and (max-width:767px) {
+                            display: block;
+                            position: absolute;
+                            bottom: -60px;
+                            background: #fff;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            padding-bottom: 13px;
+                        }
+
+                        li {
+                            @media screen and (max-width:767px) {
+                                padding-right: 0;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                #menu {
+                    @media screen and (min-width:1240px) {
+                        display: flex !important;
+                        justify-content: flex-end;
+                        margin-right: 0;
+                        border-top: 1px solid rgba(20, 36, 84, 0.1);
+                    }
+
+                    @media screen and (max-width:767px) {
+                        border-top: 1px solid rgba(75, 117, 140, 0.1)
+                    }
+
+                    .menu-main {
+                        li {
+                            a {
+                                padding-bottom: 0;
+                                padding-top: 0;
+
+                                span {
+                                    color: #000;
+                                    font-family: 'Lato';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                }
+
+                                &:hover {
+                                    span {
+                                        color: #003063;
+                                    }
+                                }
+                            }
+
+                            &.account-link {
+                                a {
+                                    span {
+                                        color: #fff;
+                                        background: #142454;
+                                        border-radius: 5px;
+                                        line-height: 30px;
+                                        padding-top: 5px;
+                                        padding-bottom: 8px;
+                                        display: block;
+                                        margin-top: 10px;
+                                        padding-left: 45px;
+
+                                        @media screen and (max-width:767px) {
+                                            width: max-content;
+                                            padding-right: 29px;
+                                        }
+
+                                        &::before {
+                                            content: '';
+                                            background-image: url('../img/bx_user-circle.svg');
+                                            width: 24px;
+                                            height: 24px;
+                                            display: block;
+                                            position: absolute;
+                                            left: 14px;
+                                            background-repeat: no-repeat;
+                                            top: 9px;
+
+                                            @media screen and (max-width:767px) {
+                                                left: 34px;
+                                            }
+                                        }
+
+
+                                    }
+                                }
+                            }
+
+                            &.cart-link {
+                                a {
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        background-image: url(../img/bag.svg);
+                                        width: 40px;
+                                        background-size: contain;
+                                        height: 40px;
+                                        background-repeat: no-repeat;
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 25px;
+                                    }
+
+                                    span {
+                                        color: transparent;
+                                    }
+                                }
+
+                                @media screen and (max-width:767px) {
+                                    opacity: 0;
+                                }
+                            }
+
+                            &.mega-menu {
+                                .sub-menu {
+                                    &.mfn-megamenu {
+                                        background: #fff;
+                                        @media (min-width:1295px) and (max-width:1395px) {
+                                             width: 100% !important;
+                                        }
+                                        @media (min-width:1821px) and (max-width:1950px) {
+                                            width: 100% !important;
+                                        }
+                                        @media screen and (max-width:767px) {
+                                            padding-left: 10px;
+                                        }
+
+                                        li {
+                                            &.menu-item {
+                                                width: 33%;
+                                                float: left !important;
+                                                padding-left: 70px;
+                                                padding-bottom: 30px;
+                                                border-top: 1px solid rgba(20, 36, 84, 0.1);
+                                                padding-top: 20px;
+                                                @media (min-width:1295px) and (max-width:1395px) {
+                                                    // width: 32%;
+                                                    padding-left: 40px;
+                                                    padding-bottom: 15px;
+                                                }
+                                                // @media (min-width:1821px) and (max-width:1950px) {
+                                                //     width: 32%;
+                                                // }
+                                                @media screen and (max-width:767px) {
+                                                    width: 46% !important;
+                                                    background: rgba(17, 36, 83, .05);
+                                                    border-radius: 5px;
+                                                    margin: 1%;
+                                                    padding: 15px;
+                                                    border: none;
+                                                    min-height: 250px;
+                                                }
+
+                                                a {
+                                                    &.mfn-megamenu-title {
+                                                        @media screen and (max-width:767px) {
+                                                            padding: 10px 0px 0 0;
+                                                            text-decoration: none;
+                                                        }
+
+                                                        &>span {
+                                                            font-family: 'Lato';
+                                                            font-style: normal;
+                                                            font-weight: 700;
+                                                            font-size: 20px;
+                                                            line-height: 24px !important;
+                                                            text-transform: capitalize;
+                                                        }
+
+                                                        span {
+                                                            &.menu-item-description {
+                                                                font-family: 'Lato';
+                                                                font-style: normal;
+                                                                font-weight: 400;
+                                                                font-size: 16px;
+                                                                line-height: 19px !important;
+                                                                color: #656565;
+                                                                text-transform: capitalize;
+                                                                margin-top: 10px;
+                                                                margin-bottom: 10px;
+                                                                @media (min-width:1821px) and (max-width:1950px) {
+                                                                    font-size: 14px;
+                                                                    line-height: 17px !important;
+                                                                }
+                                                                @media screen and (max-width:767px) {
+                                                                    display: block;
+                                                                }
+
+                                                                &::after {
+                                                                    content: 'View Plan';
+                                                                    background-image: url('../img/icon-park-outline_arrow-right.svg');
+                                                                    display: block;
+                                                                    width: 88px;
+                                                                    height: 14px;
+                                                                    background-repeat: no-repeat;
+                                                                    margin-top: 25px;
+                                                                    font-family: "Lato";
+                                                                    font-style: normal;
+                                                                    font-weight: 700;
+                                                                    font-size: 14px;
+                                                                    line-height: 9px;
+                                                                    color: #142454;
+                                                                    background-position: bottom right;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        &::after {
+                                                            @media screen and (max-width:767px) {
+                                                                content: 'View Plan';
+                                                                background-image: url('../img/icon-park-outline_arrow-right.svg');
+                                                                display: block;
+                                                                width: 88px;
+                                                                height: 14px;
+                                                                background-repeat: no-repeat;
+                                                                margin-top: 25px;
+                                                                font-family: "Lato";
+                                                                font-style: normal;
+                                                                font-weight: 700;
+                                                                font-size: 14px;
+                                                                line-height: 9px;
+                                                                color: #142454;
+                                                                background-position: bottom right;
+                                                                background-color: transparent;
+                                                                text-transform: capitalize;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                &:hover {
+                                                    background: rgba(75, 117, 140, 0.15);
+
+                                                    span {
+                                                        &.menu-item-description {
+                                                            color: #000;
+                                                        }
+                                                    }
+                                                }
+
+                                                &::before {
+                                                    content: '';
+                                                    display: inline-block;
+                                                    width: 36px;
+                                                    height: 36px;
+                                                    position: absolute;
+                                                    left: 25px;
+                                                    @media (min-width:1295px) and (max-width:1395px) {
+                                                      left: 3px;
+                                                    }
+
+                                                    @media screen and (max-width:767px) {
+                                                        display: block;
+                                                        position: relative;
+                                                        left: unset;
+                                                    }
+                                                }
+
+                                                &.icon-calendar-three {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_calendar-three.svg');
+                                                    }
+                                                }
+
+                                                &.icon-calendar-thirty-two {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_calendar-thirty-two.svg');
+                                                    }
+                                                }
+
+                                                &.icon-backpack {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_backpack.svg');
+                                                    }
+                                                }
+
+                                                &.icon-world {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_world.svg');
+                                                    }
+                                                }
+
+                                                &.icon-sim {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_sim.svg');
+                                                    }
+                                                }
+
+                                                &.icon-kosher {
+                                                    &::before {
+                                                        background-image: url('../img/Frame.svg');
+                                                    }
+                                                }
+
+                                                &.icon-in-flight {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_in-flight.svg');
+                                                    }
+                                                }
+
+                                                &.icon-every-user {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_every-user.svg');
+                                                    }
+                                                }
+
+                                                &.icon-iphone {
+                                                    &::before {
+                                                        background-image: url('../img/icon-park-outline_iphone.svg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .responsive-menu-toggle {
+                    @media screen and (max-width:767px) {
+                        top: 36px;
+                        right: unset;
+                        left: 15px;
+                    }
+
+                    i {
+                        &.icon-menu-fine {
+                            &::before {
+                                content: '';
+                                background-image: url('../img/heroicons-outline_menu copy.svg');
+                                background-repeat: no-repeat;
+                                width: 36px;
+                                height: 36px;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        i {
+                            &.icon-menu-fine {
+                                &::before {
+                                    background-image: url('../img/heroicons-outline_x.svg');
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu_wrapper {
+            float: right;
+        }
+
+        .secondary_menu_wrapper {
+
+            @media screen and (min-width:1240px) {
+                display: flex !important;
+                justify-content: flex-end;
+                margin-bottom: 5px;
+                margin-right: 20px;
+            }
+
+            .secondary-menu {
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    clear: both;
+                }
+
+                li {
+                    margin-right: 12px;
+                    display: flex;
+                    display: -webkit-flex;
+
+                    &:first-child,
+                    &:nth-child(2) {
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: 24px;
+                            background-color: #FBB434;
+                            margin-left: 24px;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+
+                    a {
+                        font-family: 'Lato', sans-serif;
+                        font-size: 16px;
+                        font-weight: normal;
+                        color: #142454;
+                        text-decoration: none;
+
+
+
+                    }
+
+                    &.envelope {
+                        &::before {
+                            content: '';
+                            background-image: url('../img/bxs_envelope.svg');
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            top: -1px;
+                            left: -9px;
+                        }
+                    }
+
+                    &.phone {
+                        &::before {
+                            content: '';
+                            background-image: url('../img/bxs_phone.svg');
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            top: -2px;
+                            left: -5px;
+                        }
+                    }
+
+                    &.social-icon {
+                        width: 32px;
+                        height: 32px;
+                        position: relative;
+                        display: block;
+
+                        a {
+                            color: transparent;
+                            position: relative;
+                            z-index: 99;
+                        }
+                        &.whatsapp{ 
+                            &::before{
+                                content: "";
+                                background-image: url('/wp-content/uploads/2023/02/whatsapp.svg');
+                                width: 25px;
+                                height: 25px;
+                                display: block;
+                                position: absolute;
+                                z-index: 0;
+                                background-repeat: no-repeat;
+                                bottom: -4px;
+                                right: -4px;
+                            }
+                        }
+
+                        &.facebook {
+                            &::before {
+                                content: "";
+                                background-image: url('../img/bxl_facebook-circle.svg');
+                                width: 25px;
+                                height: 25px;
+                                display: block;
+                                position: absolute;
+                                z-index: 0;
+
+                            }
+                        }
+
+                        &.twitter {
+                            &::before {
+                                content: "";
+                                background-image: url('../img/bxl_twitter.svg');
+                                width: 25px;
+                                height: 25px;
+                                display: block;
+                                position: absolute;
+                                z-index: 0;
+                            }
+                        }
+
+                        &.instagram {
+                            &::before {
+                                content: "";
+                                background-image: url('../img/bxl_instagram.svg');
+                                width: 25px;
+                                height: 25px;
+                                display: block;
+                                position: absolute;
+                                z-index: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &.is-sticky {
+            background: #fff !important;
+            height: 110px;
+
+            #menu {
+                #menu-main-menu {
+                    li:not(.account-link) {
+                        a {
+                            span {
+                                @media screen and (min-width:1240px) {
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #logo {
+                img.logo-sticky {
+                    max-height: 70px;
+                }
+            }
+        }
+    }
+}

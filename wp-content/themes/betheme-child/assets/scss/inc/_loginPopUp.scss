@@ -1,0 +1,84 @@
+/* login form pop up  */
+.popmake {
+
+   form {
+             label{
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #656565;
+                  }
+
+      .wpcf7-text {
+                 margin-top: 4px;
+                 width: 100%;
+                 font-family: 'Lato';
+                 border: 1px solid #656565;
+                 font-style: normal;
+                 font-weight: 400;
+                 font-size: 14px;
+                 line-height: 17px;
+                //  color: #fff !important;
+                 border-radius: 5px;
+              }
+
+      #forgotpassword{
+            text-align: center;
+         }
+
+     #forgotpassword > a{
+              padding-top: 32px;
+              padding-bottom: 32px;
+              color: #000;
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 17px;
+              text-decoration: underline;
+              text-decoration-color: #656565;
+     }
+      input[type="submit"]:hover{
+        background: #fba322 !important;
+             border: none;
+                font-family: 'Lato';
+               font-style: normal;
+              font-weight: 700;
+               font-size: 14px;
+             line-height: 17px;
+           color: #000 !important;
+           width: 100%;
+        }
+
+      input[type="submit"]{
+        pointer-events: unset;
+        cursor: pointer;
+        border-radius: 5px !important;
+        border: none !important;
+         font-family: 'Lato';
+        font-style: normal;
+       font-weight: 700;
+        font-size: 14px;
+       line-height: 17px;
+       color: #000 !important;
+       width: 100%;
+      }
+  }
+  .popmake-title{
+    font-family: 'Lato' !important;
+    font-style: normal;
+    font-weight: 800 !important;
+    font-size: 36px !important;
+    line-height: 43px !important;
+    text-align: center !important;    
+    color: #000 !important;
+  }
+    .popmake-close{
+        display: none;
+   }
+}  
+  #pum-24188{
+    background-color: rgb(7 5 105 / 60%);
+  }
