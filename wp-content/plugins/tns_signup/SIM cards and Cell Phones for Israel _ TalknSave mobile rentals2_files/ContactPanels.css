@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+.TabbedPanels {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	clear: none;
+	width: 100%; /* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/
+}
+
+
+.LocationTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.LocationTab { 
+	position: relative;
+	top: 1px;
+	float: left;
+	padding: 4px 10px;
+	margin: 0px 1px 0px 0px;
+	font: bold 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#164c8a;
+	background-color: #eff6fd;
+	text-align:center;
+	width:122px;
+	list-style:none;
+	border-left: solid 6px #FFF;
+	border-bottom: solid 1px #eff6fd;
+	border-top: none;
+	border-right: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+.LocationTabHover {
+	color: #fe6a44;
+}
+
+.LocationTabSelected {
+	background-color: #eff6fd;
+	border-bottom: 1px solid #eff6fd;
+	color:#fe6a44;
+}
+
+.LocationTab a {
+	color: black;
+	text-decoration: none;
+}
+
+.LocationBody {
+	
+	clear: both;
+	border-left: none;
+	border-bottom: none;
+	border-top: solid 1px #eff6fd;
+	border-right: none;
+	background-color: #FFF;
+	*content group
+	*clear: both;
+	*border-left: none;
+	*border-bottom: none;
+	*border-top: solid 1px #eff6fd;
+	*border-right: none;
+	*background-color: #FFF;
+}
+
+.LocationBodyContent {
+	overflow: hidden;
+	padding: 4px 4px 4px 14px;
+}
+
+.LocationBodyContentVisible {
+}
+
+
+
+
+
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* This is the selector for the TabbedPanelsTab. This container houses
+ * the title for the panel. This is also the tab "button" that the user clicks
+ * on to activate the corresponding content panel so that it appears on top
+ * of the other tabbed panels contained in the widget.
+ *
+ * For our default style, each tab is positioned relatively 1 pixel down from
+ * where it wold normally render. This allows each tab to overlap the content
+ * panel that renders below it. Each tab is rendered with a 1 pixel bottom
+ * border that has a color that matches the top border of the current content
+ * panel. This gives the appearance that the tab is being drawn behind the
+ * content panel.
+ *
+ * The name of the class ("TabbedPanelsTab") used in this selector is not
+ * necessary to make the widget function. You can use any class name you want
+ * to style this tab container.
+ */
+.TabbedPanelsTab {
+	position: relative;
+	top: 1px;
+	float: left;
+	padding: 4px 10px;
+	margin: 0px 1px 0px 0px;
+	font: bold 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#164c8a;
+	background-color: #eff6fd;
+	text-align:center;
+	/*background-image:url(../images/tab.jpg);*/
+	width:122px;
+	list-style:none;
+	border-left: solid 6px #FFF;
+	border-bottom: solid 1px #eff6fd;
+	border-top: none;
+	border-right: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+/* This selector is an example of how to change the appearnce of a tab button
+ * container as the mouse enters it. The class "TabbedPanelsTabHover" is
+ * programatically added and removed from the tab element as the mouse enters
+ * and exits the container.
+ */
+.TabbedPanelsTabHover {
+	color: #fe6a44;
+}
+
+/* This selector is an example of how to change the appearance of a tab button
+ * container after the user has clicked on it to activate a content panel.
+ * The class "TabbedPanelsTabSelected" is programatically added and removed
+ * from the tab element as the user clicks on the tab button containers in
+ * the widget.
+ *
+ * As mentioned above, for our default style, tab buttons are positioned
+ * 1 pixel down from where it would normally render. When the tab button is
+ * selected, we change its bottom border to match the background color of the
+ * content panel so that it looks like the tab is part of the content panel.
+ */
+.TabbedPanelsTabSelected {
+	background-color: #eff6fd;
+	border-bottom: 1px solid #eff6fd;
+	color:#fe6a44;
+}
+
+/* This selector is an example of how to make a link inside of a tab button
+ * look like normal text. Users may want to use links inside of a tab button
+ * so that when it gets focus, the text *inside* the tab button gets a focus
+ * ring around it, instead of the focus ring around the entire tab.
+ */
+.TabbedPanelsTab a {
+	color: black;
+	text-decoration: none;
+}
+
+/* This is the selector for the ContentGroup. The ContentGroup container houses
+ * all of the content panels for each tabbed panel in the widget. For our
+ * default style, this container provides the background color and borders that
+ * surround the content.
+ *
+ * The name of the class ("TabbedPanelsContentGroup") used in this selector is
+ * not necessary to make the widget function. You can use any class name you
+ * want to style the ContentGroup container.
+ */
+.TabbedPanelsContentGroup {
+	clear: both;
+	border-left: none;
+	border-bottom: none;
+	border-top: solid 1px #eff6fd;
+	border-right: none;
+	background-color: #FFF;
+}
+
+/* This is the selector for the Content panel. The Content panel holds the
+ * content for a single tabbed panel. For our default style, this container
+ * provides some padding, so that the content is not pushed up against the
+ * widget borders.
+ *
+ * The name of the class ("TabbedPanelsContent") used in this selector is
+ * not necessary to make the widget function. You can use any class name you
+ * want to style the Content container.
+ */
+.TabbedPanelsContent {
+	overflow: hidden;
+	padding: 4px;
+}
+
+/* This selector is an example of how to change the appearnce of the currently
+ * active container panel. The class "TabbedPanelsContentVisible" is
+ * programatically added and removed from the content element as the panel
+ * is activated/deactivated.
+ */
+.TabbedPanelsContentVisible {
+}
+
+/* Styles for Printing */
+@media print {
+.TabbedPanels {
+	overflow: visible !important;
+}
+.LocationBody {
+	display: block !important;
+	overflow: visible !important;
+	height: auto !important;
+}
+.LocationBodyContent {
+	overflow: visible !important;
+	display: block !important;
+	clear:both !important;
+}
+.LocationTab {
+	 overflow: visible !important;
+	 display: block !important;
+	 clear:both !important;
+}
+}

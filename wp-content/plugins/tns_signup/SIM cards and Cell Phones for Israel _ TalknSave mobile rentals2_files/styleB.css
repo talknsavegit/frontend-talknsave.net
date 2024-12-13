@@ -1,0 +1,108 @@
+﻿
+.TableTemplate
+{
+    border-width:1px; 
+	border-style:solid;   
+	border-color:#cccccc;   
+	color:#ff3300;
+	font-weight:bold;
+	line-height:23px;
+	font-size:12px;	 
+}
+
+
+.TableTemplateHeader
+{
+    background-color:White !important; 
+    vertical-align:middle !important;  
+    text-align:center !important;  
+    height:25px!important; 
+    color:#666666!important;    
+	font-weight:bold;
+}
+
+.TableTemplateFirstChild
+{
+    text-align:left; 
+}
+
+.TableTemplateLastChild
+{
+    text-align:center; 
+	color:#ff3300;
+	font-weight:bold;
+}
+
+.TableItem
+{
+    border-right:1px dashed #cccccc!important; 
+	height:22px!important; 	
+	vertical-align:middle !important;  
+    text-align:center !important;  	
+    color:#666666!important; 
+    background:#f1f1f1 !important; 			
+    font-weight:normal !important; 	
+}
+
+.TableAltItem
+{
+    border-right:1px dashed #cccccc!important; 
+	height:22px!important; 	
+	vertical-align:middle !important;  
+    text-align:center !important;  	
+    color:#666666!important; 
+    background-color:White  !important;													
+     font-weight:normal !important; 	
+    
+}
+.HeaderLeftBorder
+{
+    background-color:White !important; 
+    border-left-width:1px!important;  
+	border-left-style:solid!important;
+	border-color:#cccccc!important; 	
+	vertical-align:middle !important;  
+    text-align:center !important;  
+    height:25px!important;   
+    color:#666666!important; 
+    font-size:12px!important; 	
+    font-weight:bold; 
+    border-top:1px solid #e1e1e1!important;  
+     
+}
+
+.HeaderRightBorder
+{
+    border-right-width:1px!important;  
+	border-right-style:solid!important;
+	border-color:#cccccc!important; 
+	border-left :dashed 1px #cccccc  !important; 
+	background-color:White !important; 
+    vertical-align:middle !important;  
+    text-align:center !important;  
+    height:25px!important;  
+    color:#666666!important; 
+    font-size:12px!important; 	
+    font-weight:bold; 
+    border-top:1px solid #e1e1e1!important;  
+     
+     
+}
+
+div.RadComboBox .rcbDisabled, 
+div.RadComboBox .rcbDisabled .rcbInputCell .rcbInput
+ {    
+      background-color: White!important;  
+      color: Black!important;     
+      font-weight: bold; 
+      background-image: none!important;  
+  } 
+  
+ .TXTTerms
+{
+    float:left;
+    font-size:14px;
+	color:#666666;
+	padding-left:10px;
+	padding-bottom:15px; 
+}

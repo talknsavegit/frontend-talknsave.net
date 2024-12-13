@@ -1,0 +1,174 @@
+
+ function SetScrollWin0() {
+//         var height = document.body.scrollHeight;
+//         var width = document.body.scrollWidth;
+//         var link = document.getElementById("<%= LinkCDRS.ClientID %>");
+//         var w = link.offsetTop; // document.body.offsetHeight -
+         window.scrollTo(0, 50);
+     }
+
+function VisbileRB_Ship(obj, rb, t) {
+    var el = document.getElementById(rb);
+    if (el != null) {
+        if (el.checked)
+            toggle(obj, 'show');
+        else
+            toggle(obj, 'hide');
+    }
+
+    var oShip = "ctl00_ContentPlaceHolder1_shipDetails";
+    if (t=='1')
+        toggle(oShip, 'show');
+    else
+        toggle(oShip, 'hide');
+    
+}
+
+function toggle2(obj, obj2) {
+
+   toggle(obj,'');
+   toggle(obj2,'');
+    
+}
+function toggle(obj, s) {
+    var el = document.getElementById(obj);
+    if (el != null) {
+        if (s == '') {
+            if (el.style.display != 'none') {
+                el.style.display = 'none';
+            }
+            else {
+                el.style.display = 'block';
+                el.style.display = 'inline';
+            }
+        } else if (s == 'show') {
+            el.style.display = 'block';
+            el.style.display = 'inline';
+        } else if (s == 'hide') {
+            el.style.display = 'none';
+        }
+    }
+}
+
+
+function toggleP(obj, s) {
+    var el = document.getElementById(obj);
+    
+    if (el != null) {
+        if (s == '') {
+            if (el.style.display != 'none') {
+                el.style.display = 'none';
+            }
+            else {
+                el.style.display = 'block';
+                el.style.display = 'inline';
+                el.style.marginLeft="130px";
+            }
+        } else if (s == 'show') {
+            el.style.display = 'block';
+            el.style.display = 'inline';
+            el.style.marginLeft="130px";
+        } else if (s == 'hide') {
+            el.style.display = 'none';
+        }
+    }
+}
+
+function toggleClass(obj, s,className) {
+    var el = document.getElementById(obj);
+    if (el != null) {
+        if (s == '') {
+            if (el.style.display != 'none') {
+                el.style.display = 'none';
+            }
+            else {
+                el.style.display = 'block';
+                el.style.display = 'inline';
+                el.classList.add(className);
+            }
+        } else if (s == 'show') {
+            el.style.display = 'block';
+            el.style.display = 'inline';
+            el.classList.add(className);
+        } else if (s == 'hide') {
+            el.style.display = 'none';
+        }
+    }
+}
+
+function getScrollXY() {
+    var scrOfX = 0, scrOfY = 0;
+    if (typeof (window.pageYOffset) == 'number') {
+        //Netscape compliant
+        scrOfY = window.pageYOffset;
+        scrOfX = window.pageXOffset;
+    } else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
+        //DOM compliant
+        scrOfY = document.body.scrollTop;
+        scrOfX = document.body.scrollLeft;
+    } else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
+        //IE6 standards compliant mode
+        scrOfY = document.documentElement.scrollTop;
+        scrOfX = document.documentElement.scrollLeft;
+    }
+    return [scrOfX, scrOfY];
+}
+
+function checkIE()
+{
+  var ieM = document.getElementById("IEMsg"); 
+  var ua = navigator.userAgent.toLowerCase();
+  var ie10 = ua.indexOf("msie 10");
+   if (ie10 != -1)
+  {     
+      if (ieM!=null)
+      {   
+          ieM.style.display = "block";      
+          
+          var scr = getScrollXY();
+          var l = (screen.width-300)/2  + scr[0];
+          var t =200;
+          
+          ieM.style.top = t + "px";
+          ieM.style.left = l + "px";
+      }
+    }
+    
+    else
+    if (ieM!=null)
+       ieM.style.display = "none";  
+    
+ 
+}
+
+
+function ShowHideContent(objContent,objAll, ContentHeight) {
+    var el = document.getElementById(objContent);
+    var elAll = document.getElementById(objAll);
+    if (el != null && elAll != null) 
+    {
+       
+            if (el.style.visibility=='inherit' || el.style.visibility=='') 
+            {
+                el.style.visibility='hidden'; 
+                elAll.style.height='56px';
+            }
+            else 
+            {
+                el.style.visibility='inherit';              
+               elAll.style.height=(ContentHeight+70)+'px';
+            }    
+       
+    }
+}
+
+function HideContent(objContent,objAll, ContentHeight) {
+    var el = document.getElementById(objContent);
+    var elAll = document.getElementById(objAll);
+    if (el != null && elAll != null) 
+    {
+        el.style.visibility='hidden'; 
+        elAll.style.height='56px';
+    
+    }
+}

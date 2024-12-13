@@ -1,0 +1,19 @@
+div#Wrapper div#Content div.content_wrapper.clearfix div.sections_group div.entry-content {
+    /*padding-top:60px; 
+    padding-bottom:0px; */
+    background-image: url(https://djmxwcm3rj9tp.cloudfront.net/wp-content/uploads/2016/05/Plans-Pattern-2-1.jpg);
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+.gw-go {
+    display: flex;
+}
+
+/*div#Wrapper iframe {
+    max-width: 100%;
+    width: 100%;
+    min-height: 768px;
+    height: 100%;
+    overflow: visible;
+}*/

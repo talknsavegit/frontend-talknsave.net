@@ -1,0 +1,119 @@
+.calculator_block .centered h2 {
+    width: auto;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calculator_block {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    max-width: 33vw;
+}
+
+.centered, .calculator_block form, .calculator_block div {
+    width: 100%;
+}
+
+.calculator_block form input {
+    width: 50%;
+}
+
+.calculator_block form label {
+    width: 50%;
+}
+
+#halfWidth1, #halfWidth2, .halfWidth {
+    width: 49%;
+}
+
+#halfWidth1 {
+    float: left;
+    display: flex;
+}
+
+#halfWidth2 {
+    float: right;
+    display: flex;
+}
+
+.calculator_block .result {
+    font-weight: bold;
+    margin-top:20px;
+    width:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*.flexDisp {
+    display: flex;
+}*/
+
+#selectDatesInfo {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: white;
+    padding: 20px;
+    border: 1px;
+    border-color: lightskyblue;
+    border-style: solid;
+}
+
+#ui-datepicker-div > table > tbody {
+    background-color:white !important;
+}
+
+#ui-datepicker-div > table > tbody > tr {
+    background-color:white !important;
+}
+
+#ui-datepicker-div > table > tbody > tr > td {
+    background-color:white !important;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    border: 1px solid #888;
+    width: fit-content;
+}
+
+/* The Close Button */
+.close {
+    margin-top: -20px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
